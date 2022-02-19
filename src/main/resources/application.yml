@@ -1,0 +1,26 @@
+spring:
+  config.activate.on-profile: prd
+logging:
+  pattern:
+    file: "[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n"
+  file:
+    name: C:\Users\bcw-pc\Desktop\workspace\eclipse-workspace\infbootlearn\logs\log_prd.log
+    max-history: 30
+  level:
+    org:
+      springframework: INFO
+---
+spring:
+  config.activate.on-profile: dev
+logging:
+  pattern:
+    file: "[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n"
+  file:
+    name: C:\Users\bcw-pc\Desktop\workspace\eclipse-workspace\infbootlearn\logs\log_dev.log
+    max-history: 30
+  level:
+    org:
+      hibernate: DEBUG
+      springframework: INFO
+server:
+  port: 8080
